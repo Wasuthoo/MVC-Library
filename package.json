@@ -1,5 +1,5 @@
 {
-  "name": "vue-mvc2-64",
+  "name": "counter-pinia",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
