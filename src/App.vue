@@ -1,16 +1,22 @@
 <template>
-  <div class="app">
+  <v-app>
+    
     <nav>
-      <RouterLink to="/">Home |</RouterLink>
-      <RouterLink to="/about"> About</RouterLink>
+    <RouterLink to="/">Home |</RouterLink>
+    <RouterLink to="/about"> About</RouterLink>
     </nav>
-    <RouterView />
-  </div>
+    <router-view/>
   
+  </v-app>
 </template>
 
-<style >
-.app{
-  text-align: center;
+<script>
+
+export default {
+  name: 'App',
+
+  data: () => ({
+    //
+  }),
 }
-</style>
+</script>

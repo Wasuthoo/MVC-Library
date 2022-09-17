@@ -1,7 +1,7 @@
 <template>
-    <div class="count">
+    <v-container class="count">
      {{ storeCounter.count }}
-   </div>
+   </v-container>
 </template>
 
 <script setup>
