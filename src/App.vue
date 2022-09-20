@@ -1,22 +1,19 @@
 <template>
   <v-app>
-    
-    <nav>
-    <RouterLink to="/">Home |</RouterLink>
-    <RouterLink to="/about"> About</RouterLink>
-    </nav>
-    <router-view/>
-  
+    <NavEx/>
+
   </v-app>
 </template>
 
 <script>
 
-export default {
-  name: 'App',
+import NavEx from "./components/NavEx.vue";
 
+export default {
+  name: "App",
   data: () => ({
     //
   }),
-}
+  components: { NavEx },
+};
 </script>
