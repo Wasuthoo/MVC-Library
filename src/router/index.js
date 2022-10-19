@@ -22,6 +22,11 @@ const router = createRouter({
       path: '/isa',
       name: 'isa',
       component:  () => import('../views/isaView.vue')
+    },
+    {
+      path: '/classroom',
+      name: 'classroom',
+      component:  () => import('../views/classroom.vue')
     }
   ]
 })

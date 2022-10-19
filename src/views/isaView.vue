@@ -4,6 +4,7 @@
       <h1 class="pa-10">Input command as Binary</h1>
       <a class="ml-10 text-red">{{storeRegister.getBinary}}</a>
       <v-form class="ml-10">
+
         <v-text-field
           v-model="input"
           label="Binary"
@@ -30,7 +31,7 @@
           <v-container>
             <v-row>
               <v-col>
-                <v-card class="pa-2 mt-n6"> {{ n }} </v-card>
+                <v-card class="pa-2 mt-n6"> {{ n-1 }} </v-card>
               </v-col>
               <v-col>
                 <v-card class="pa-2 mt-n6">
@@ -58,8 +59,6 @@
       storeRegister.getaBinary();
       console.log(input);
     } ;
-  
-  
   
   </script>
   
