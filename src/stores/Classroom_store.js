@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { load } from 'webfontloader'
 
-export const useISA_register = defineStore({
+export const Class_Store= defineStore({
   id: 'register',
   state: () => ({
     register: Array(16).fill(0),

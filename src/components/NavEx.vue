@@ -48,8 +48,7 @@ export default {
       sidebar: false,
       menuItems: [
         { title: "Home", path: "/", icon: "home" },
-        { title: "About", path: "/about", icon: "face" },
-        { title: "Sign In", path: "/signin", icon: "lock_open" },
+        { title: "Counter", path: "/about", icon: "face" },
       ],
     };
   },

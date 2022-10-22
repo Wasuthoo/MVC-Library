@@ -10,6 +10,7 @@
           label="Binary"
           outlined
           dense
+          clearable
           ></v-text-field>
         <v-btn @click="inputstore" class="mt-5">Submit</v-btn>
         
@@ -58,6 +59,7 @@
       storeRegister.binary = input.value;
       storeRegister.getaBinary();
       console.log(input);
+      input = ""
     } ;
   
   </script>

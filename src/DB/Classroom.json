@@ -1,0 +1,34 @@
+{
+    "Classroom" : {
+        "Assignments" : {
+            "Assignment1" : {
+                "AssignmentName" : "Assignment 1",
+                "AssignmentDeatail" : "Homework",
+                "DueDate" : "2018-01-01",
+                "DueTime" : "12:00:00",
+                "Participants" : "63050000,63050001,63050002"
+            },
+            "Assignment2" : {
+                "AssignmentName" : "Assignment 2",
+                "AssignmentDeatail" : "Homework",
+                "DueDate" : "2018-01-01",
+                "DueTime" : "12:00:00",
+                "Participants" : "63050000,63050001,63050002"
+            }
+        },
+        "StudentWork" : {
+            "Work1" : {
+                "StudentID" : "63050000",
+                "AssignmentName" : "Assignment 2",
+                "Workdetail" : "HTTP is the protocol",
+                "Time" : "2018-01-01 12:00:00"
+            },
+            "Work2" : {
+                "StudentID" : "63050001",
+                "AssignmentName" : "Assignment 2",
+                "Workdetail" : "TCP is the protocol",
+                "Time" : "2018-01-01 12:00:00"
+            }
+        }
+    }
+}
