@@ -1,19 +1,10 @@
 <template>
-  <v-app>
-    <NavEx/>
-
-  </v-app>
+  <NavEx/>
 </template>
 
-<script>
+<script setup >
 
+import Nav from "./components/Nav.vue";
 import NavEx from "./components/NavEx.vue";
 
-export default {
-  name: "App",
-  data: () => ({
-    //
-  }),
-  components: { NavEx },
-};
 </script>

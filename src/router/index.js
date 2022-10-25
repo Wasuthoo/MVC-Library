@@ -31,12 +31,12 @@ const router = createRouter({
     {
       path: '/classroom/teacher',
       name: 'teacher',
-      component:  () => import('../views/Classroom/TeacherView.vue')
+      component:  () => import('../views/TeacherView.vue')
     },
     {
       path: '/classroom/student',
       name: 'student',
-      component:  () => import('../views/Classroom/StudentView.vue')
+      component:  () => import('../views/StudentView.vue')
     },
 
   ]
