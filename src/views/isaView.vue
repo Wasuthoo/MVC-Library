@@ -46,26 +46,22 @@
     </div>
   </template>
     
-  <script setup>
-  
+<script setup>
+
     import { useISA_register } from "../stores/ISA_register";
     import { ref } from 'vue'
   
     const storeRegister = useISA_register();
-  
     const input = ref('')
-  
+    
     const inputstore = () =>{
       storeRegister.binary = input.value;
       storeRegister.getaBinary();
       console.log(input);
       input = ""
     } ;
+
+</script>
   
-  </script>
+
   
-  
-    
-    <style>
-  </style>
-    

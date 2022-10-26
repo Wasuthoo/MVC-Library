@@ -1,30 +1,36 @@
 import { defineStore } from 'pinia'
-import { load } from 'webfontloader'
-import db from "../DB/Assignment.json";
+import axios from "axios";
 
 
 
 export const Class_Store = defineStore({
   id: 'class',
   state: () => ({
-    DBfile : db,
-
+    db : [],
   }),
   actions: {
-    ReadDB() {
-      console.log(this.DBfile);
+    async getDB() {
+      try {
+        const res = await axios.get(`http://localhost:3001/Assignment`);
+        this.db = res.data;
+      } catch (e) {
+        console.error(e);
+      }
     },
-    writeDB() {
-      console.log("writeDB");
+    writeDB(payload) {
+      console.log(payload);
+      
     },
+
     addAssignment() {
       console.log("addAssignment");
     }
+
   },
   getters: {
     getDB() {
       return db;
-    },d
+    },
 
   }
 })

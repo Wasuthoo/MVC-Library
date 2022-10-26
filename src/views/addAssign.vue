@@ -6,6 +6,7 @@
       v-model="valid"
       lazy-validation
     >
+    <a>Assignment name</a>
       <v-text-field
         v-model="name"
         :counter="50"
@@ -13,23 +14,30 @@
         label="Name"
         required
       ></v-text-field>
+      <a>Assignment description</a>
   
       <v-text-field
-        v-model="Desc"
+        v-model="desc"
         label="Description"
         optional
       ></v-text-field>
-
+      <a>Date form : dd/mm/yyyy</a>
       <v-text-field
         v-model="duedate"
         label="Due Date"
+        :counter="10"
 
       ></v-text-field>
+      
+      <a>24hr Time : hh:mm</a>
 
       <v-text-field
         v-model="duetime"
         label="Due Time"
+        :counter="5"
       ></v-text-field>
+      
+      <a>StudentID</a>
 
       <v-text-field
         v-model="student"
@@ -42,18 +50,11 @@
         :disabled="!valid"
         color="success"
         class="mr-4"
-        @click="validate"
+        @click="submit"
       >
         Submit
       </v-btn>
   
-      <v-btn
-        color="error"
-        class="mr-4"
-        @click="reset"
-      >
-        Reset Form
-      </v-btn>
   
   
     </v-form>
@@ -62,40 +63,32 @@
   </template>
 
 
-  <script>
-  export default {
-    data: () => ({
-      valid: true,
-      name: '',
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
-      ],
-      email: '',
-      emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-      ],
-      select: null,
-      items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4',
-      ],
-      checkbox: false,
-    }),
 
-    methods: {
-      validate () {
-        this.$refs.form.validate()
-      },
-      reset () {
-        this.$refs.form.reset()
-      },
-      resetValidation () {
-        this.$refs.form.resetValidation()
-      },
-    },
+
+<script setup>
+
+import { ref } from 'vue';
+import { Class_Store } from "../stores/Class_Store";
+import { useRouter } from 'vue-router'
+  
+  const router = useRouter()
+  const store = Class_Store()
+  const name = ref('');
+  const desc = ref('');
+  const duedate = ref('');
+  const duetime = ref('');
+  const student = ref('');
+
+  const submit =() => {
+    const data = {
+      Title_Name: name.value,
+      Description: desc.value,
+      Due_Date: duedate.value,
+      Due_Time: duetime.value,
+      Student: student.value
+    }
+    store.writeDB(data)
+    router.push('/classroom/teacher')
   }
+
 </script>

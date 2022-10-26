@@ -28,7 +28,7 @@
       </v-card>
     </v-dialog>
   </div>
-  <v-btn color="primary" text @click="dialog = false"> I accept </v-btn>
+
 </template>
 
 <script>
