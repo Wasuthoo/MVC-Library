@@ -4,25 +4,27 @@ import db from "../DB/Assignment.json";
 
 
 
-
 export const Class_Store = defineStore({
   id: 'class',
   state: () => ({
-    name:"wasu"
+    DBfile : db,
 
   }),
   actions: {
     ReadDB() {
-      console.log(db);
+      console.log(this.DBfile);
     },
     writeDB() {
       console.log("writeDB");
+    },
+    addAssignment() {
+      console.log("addAssignment");
     }
   },
   getters: {
     getDB() {
       return db;
-    },
+    },d
 
   }
 })
